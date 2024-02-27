@@ -1,0 +1,44 @@
+/* хорошо использовать для расположения карточек */
+.grid {
+	display: grid;
+	grid-template-areas:
+		'nav header header'
+		'nav article ads'
+		'nav footer footer';
+
+	/* гриды */
+	grid-template-rows: 5rem 1fr 5rem;
+	grid-template-columns: 20% 1fr 15%;
+
+	/* фреймы
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 1fr); */
+
+	grid-gap: 2rem;
+	height: 100vh;
+}
+
+.header,
+.footer,
+.article,
+.nav,
+.site-ads {
+	padding: 2rem;
+	background: gold;
+}
+
+.nav {
+	grid-area: nav;
+}
+.header {
+	grid-area: header;
+}
+.footer {
+	grid-area: footer;
+}
+.article {
+	grid-area: article;
+}
+.site-ads {
+	grid-area: ads;
+}
